@@ -1,0 +1,589 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* body */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Reusable class names */
+.pt-10 {
+  padding-top: 10em;
+}
+
+/*  NAVBAR STLYING */
+.ctsc-navbar {
+  font-family: "Inter", sans-serif;
+  background-color: #253451;
+  width: 100%;
+  height: 3.5em;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.ctsc-logo {
+  display: inline-block;
+  margin-top: 0.8em;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.ctsc-logo a {
+  color: #fff;
+}
+
+.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  padding-top: 0.3em;
+}
+
+.nav-item {
+  padding: 0.5rem 0.8em;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0 !important;
+  position: relative;
+  cursor: pointer;
+}
+
+
+.nav-link:hover {
+  color: #c2d7ff;
+  border-bottom: 1px solid #c2d7ff;
+  transition: 0.3s ease;
+}
+
+
+.active {
+  color: #c2d7ff;
+  border-bottom: 1px solid #c2d7ff;
+}
+
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover>.dropdown-content {
+  display: block;
+}
+
+.dropdown:hover>.nav-link i {
+  transform: rotate(180deg);
+}
+
+.dropdown-content {
+  position: absolute;
+  width: 13em;
+  left: -1.5em;
+  top: 3em;
+  transition: .3s ease-in-out;
+  text-align: left;
+  display: none;
+}
+
+
+
+
+
+.dropdown-content li {
+  color: #fff;
+  padding: 0.6em 2em 0.6em 0.6em;
+  width: 100%;
+  list-style: none;
+  background-color: #3d5580;
+}
+
+.dropdown-content li a {
+  color: #fff;
+}
+
+.dropdown-content li a:hover {
+  color: #c2d7ff;
+  border-bottom: 1px solid #c2d7ff;
+  transition: 0.3s ease;
+}
+
+
+.nav-link i {
+  font-size: 0.65em;
+  margin-left: 3px;
+  transition: 0.3s ease;
+}
+
+
+.nav-toggle {
+  color: #fff;
+  font-size: 2em;
+  margin-top: 11px;
+  display: none !important;
+  opacity: 0;
+}
+
+
+/* ---------------------------- BUTTON STYLING ------------------ */
+
+.btn-primary {
+  border-radius: 30px;
+  color: #ffffff;
+  background-color: #253451;
+  padding: 0.8em 2.5em;
+}
+
+.btn-primary:hover {
+  background-color: #1c2841;
+}
+
+.btn-secondary {
+  border-radius: 30px;
+  background-color: #d9d9d9;
+  color: #253451;
+  font-size: 18.15px;
+  padding: 0.7em 2.5em;
+}
+
+.btn-secondary:hover {
+  background-color: #e7e7e7;
+  color: #253451;
+}
+
+.btn-tetiary {
+  padding: 0.5em 1.7em;
+  background-color: #000;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.btn-tetiary:hover {
+  color: #d9d9d9;
+}
+
+/* --------------------------- HOME PAGE ------------------------- */
+
+/* HEADER PAGE STYLING */
+.background-img {
+  background-image: url('../../assets/img/Iniedoibibio.png');
+  background-size: cover;
+  background-color: blue;
+  height: 90vh;
+  margin-top: 3px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.first-header {
+  color: #ffa14a;
+  font-size: 4em;
+  font-weight: 600;
+  margin-bottom: 0.40em;
+}
+
+.second-header {
+  color: #ffffff;
+  font-size: 5em;
+  margin-bottom: 0;
+  font-weight: 100;
+}
+
+.ctsc-text-description {
+  font-size: 16.79px;
+  font-weight: 400;
+  line-height: 20.18px;
+  color: #ffffff;
+  margin-bottom: 3.7em;
+}
+
+
+/* DIGITAL ACCESSIBILITY STYLING */
+
+.content-section {
+  text-align: center;
+  padding: 4em 0 3em 0;
+}
+
+.digital-access h2 {
+  font-size: 2.5em;
+  font-weight: 400;
+  margin-bottom: 1em;
+  color: #253451;
+}
+
+.digital-access p {
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 3em;
+}
+
+/* CSTC STORY STYLING */
+
+.ctsc-story {
+  background: #ececec;
+}
+
+.ctsc-story img {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.ctsc-story h2 {
+  font-size: 25px;
+  margin-bottom: 1em;
+  color: #253451;
+  text-align: left;
+}
+
+.ctsc-story-p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.8px;
+  text-align: left;
+  margin-bottom: 1.5em;
+}
+
+.ctsc-story-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.ctsc-story-header h2 {
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.ctsc-story-header span {
+  padding-top: 1em;
+}
+
+.ctsc-story-detail {
+  background-color: #fff;
+  padding: 1em 2em 2em 2em;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  text-align: left;
+  margin-bottom: 2em;
+}
+
+.ctsc-story-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 16.15px;
+  margin-top: 2em;
+}
+
+/*------------------------ CSTC EMAIL STYLING--------------------- */
+
+.signup-section {
+  background: #253451;
+  padding-bottom: 4em;
+}
+
+.signup-section h3 {
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 300;
+  font-size: 2em;
+
+}
+
+.signup-section p {
+  color: #fff;
+  line-height: 25px;
+  font-weight: 300;
+}
+
+.signup {
+  padding: 3.3em 0em;
+  border-radius: 30px;
+  background-color: #f8f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+.input-wrapper {
+  width: 80%;
+}
+
+.input-style {
+  background-color: #d9d9d9;
+  padding: .80em;
+  border-radius: 15px;
+}
+
+.input-style:focus {
+  outline: 1px solid #d9d9d9;
+}
+
+
+.signup-btn {
+  border-radius: 15px;
+  padding: 0.8em 1.7em;
+}
+
+/* --------------------CRACKING THE CODE SECTION ----------------------- */
+
+.crack-the-code {
+  background-color: #d9d9d9;
+  padding: 3em 0 0 0;
+  margin-bottom: 1rem;
+}
+
+.left-side {
+  padding-top: 6em;
+
+}
+
+.left-side p {
+  font-weight: 600;
+  font-size: 1.2em;
+  overflow-y: hidden;
+}
+
+.left-side-box {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.right-side p {
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.right-side-box {
+  width: 70%;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+/*  FOOTER SECTION   */
+footer {
+  background-color: #1c2841;
+  padding: 3.5em 0 0 0;
+  color: #fff;
+}
+
+footer h4 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+footer h6 {
+  font-size: 1em;
+  font-weight: lighter;
+}
+
+footer p {
+  font-size: 0.9em;
+  font-weight: lighter;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  color: #c2d7ff;
+}
+
+.copy-right {
+  padding: 5px 0;
+  margin-top: 4em;
+  background-color: #3d5580;
+  font-size: 1em;
+}
+
+.footer-icon {
+  font-size: 1.1em;
+  background-color: #3d5580;
+  border-radius: 50%;
+  padding: 5px 10px;
+  margin: 0 .40em;
+}
+
+
+
+/* ------ OVERWRITING BOOTSTRAP STYLES---------- */
+
+input:active,
+input:focus,
+textarea:active,
+textarea:focus,
+button:active,
+button:focus,
+select:active,
+select:focus,
+.page-link:active,
+.page-link:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+
+.btn:active,
+.btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.btn {
+  border: none !important;
+}
+
+
+.hidden {
+  display: none;
+}
+
+/* ----------------------RESPOSIVENESS-------------------------- */
+
+@media screen and (max-width:992px) {
+  /* FOR HOME PAGE */
+
+  /* HEADER & NAVBAR STYLING */
+  .background-img {
+    height: 70vh;
+  }
+
+  .ctsc-navbar {
+    padding: 0 3%;
+  }
+
+  .nav-item {
+    padding: 0.5rem 0.5em;
+  }
+
+  .dropdown-content {
+    position: static;
+    transform: translate(-3%, 10%);
+    width: 100%;
+  }
+
+  .dropdown-content li {
+
+    background-color: #183064;
+  }
+
+
+}
+
+@media screen and (max-width:768px) {
+
+  /* FOR HOME PAGE */
+
+  /* GENERAL STYLING */
+  .pt-10 {
+    padding-top: 4em;
+  }
+
+  /* NAVBAR STYLING */
+  .nav-menu {
+    padding: 0.8em 0 1em 1.3em;
+    left: -100%;
+    top: 4em;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #1c2841;
+    z-index: 0;
+    transition: 0.3s ease-in-out;
+  }
+
+  .dropdown:hover {
+    margin-bottom: 2.2em;
+  }
+
+  .nav-link {
+    display: inline;
+  }
+
+  .nav-link:hover {
+    color: #fff;
+    border-bottom: none;
+  }
+
+  .nav-toggle {
+    display: block !important;
+    opacity: 1;
+  }
+
+  /* This is for the JavaScript toggle */
+  .show {
+    left: 0;
+  }
+
+  /* HEADER STYLING */
+  .background-img {
+    height: 50vh;
+  }
+
+  .first-header {
+    font-size: 2.5em;
+    margin-bottom: 0.50em;
+  }
+
+  .second-header {
+    font-size: 2em;
+
+  }
+
+  .ctsc-text-description {
+    margin-bottom: 2em;
+    margin-top: 2em;
+
+  }
+}
+
+@media screen and (max-width:575px) {
+  /* FOR HOME PAGE */
+
+
+  /* CRACK THE CODE STYLING */
+  .left-side {
+    padding-top: 2em;
+  }
+
+  .left-side-box {
+    width: 60%;
+    height: 40vh;
+    margin: 1em auto;
+  }
+
+  .right-side-box {
+    width: 60%;
+    height: 40vh;
+  }
+
+  .right-side-box-2 {
+    width: 60%;
+    height: 40vh;
+  }
+
+  .right-side p {
+    text-align: center;
+  }
+}

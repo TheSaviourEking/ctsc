@@ -1,0 +1,62 @@
+/* CTSC team Styles */
+.card {
+    align-items: center;
+    border: none;
+    justify-content: space-between;
+
+    /* margin-top: 3em; */
+}
+
+.card>div {
+    flex-basis: 50%;
+}
+
+.card>div:first-child {
+    /* min-height: 50%; */
+}
+
+.card>div:last-child {
+    height: 10rem;
+    padding-bottom: 1rem;
+    aspect-ratio: 1;
+}
+
+.cards {
+    gap: unset !important;
+    display: grid;
+    margin: 0 auto !important;
+}
+
+/* .card-body {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+} */
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* make content equal height */
+}
+
+.card img {
+    /* height: 20em;
+    width: 20em; */
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.card p {
+    font-size: 0.9em;
+}
+
+.blockquote {
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+.blockquote-footer {
+    font-size: 2em;
+    font-weight: 600;
+}
