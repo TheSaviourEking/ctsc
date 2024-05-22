@@ -1,0 +1,107 @@
+.ibom-services {
+
+    * {
+        transition: all 0.6s;
+    }
+
+    /*----------------------- Ibom Service styling -----------------------------*/
+    .service-menu {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    .service-menu>div:last-child {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+        a {
+            padding: 1rem;
+            border-radius: 0.5rem 1rem;
+        }
+    }
+
+    .background-color {
+        background-color: #d8d8ff;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .services-container {
+        display: flex;
+        flex-wrap: wrap;
+        background: #d2d2d2;
+        border-radius: 3em;
+        gap: 1em;
+        padding: 4em 3em 2em;
+        position: relative;
+        top: -7em;
+        z-index: 1;
+    }
+
+    /* -------------------- responsive on a mobile device---------------- */
+    .service-card {
+        text-align: center;
+        flex-basis: 30%;
+        align-self: normal;
+        padding: 5.75rem 2.875rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: #000;
+        background-color: #d9d9d9;
+        border-radius: 1em;
+        text-decoration: none;
+    }
+
+    .service-details {
+        margin-top: 18%;
+        margin-left: 3em;
+    }
+
+
+    .card-body h3 {
+        font-family: "Poppins", sans-serif;
+        font-size: 1em;
+        font-weight: 600;
+        line-height: 36px;
+    }
+
+    .service-details a {
+        padding: 0.5em;
+    }
+
+    .card-img {
+        border-radius: 1em;
+    }
+
+    a:hover {
+        background-color: #1c2841;
+        color: white;
+    }
+
+    /* ----------------------RESPOSIVENESS-------------------------- */
+    @media screen and (max-width:768px) {
+
+        /* Ibom service responsiveness */
+        .service-card {
+            padding: 1em;
+            flex-basis: 47%;
+            gap: 0;
+        }
+
+        .service-details {
+            margin-top: 2em;
+            margin-left: 0;
+
+        }
+
+    }
+
+}
+
+.hidden {
+    display: none !important;
+}

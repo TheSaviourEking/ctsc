@@ -1,0 +1,129 @@
+.mb-8 {
+    margin-bottom: 8em;
+}
+
+
+/* SIGN UP STYLING */
+.sign-up-hd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #253451;
+    min-height: 60vh;
+
+}
+
+.sign-up-hd h1 {
+    font-size: 3em;
+    color: #fff;
+}
+
+.sign-up-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../assets/img//sign-up-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2em;
+    transform: translate(0, -10%);
+    z-index: 3;
+    border-radius: 2em;
+}
+
+
+.sign-up-card {
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 2em;
+
+}
+
+.ctsc-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.ctsc-logo a {
+    color: #fff;
+}
+
+.ctsc-signup-logo {
+    width: 5rem;
+}
+
+.sign-up-card h3 {
+    font-weight: bold;
+    color: #100F14;
+}
+
+
+.google-account {
+    outline: 1px solid #CBCAD7;
+    border-radius: 5px;
+    padding: 1em 0.5em;
+    color: #19181F;
+    margin: 0 auto;
+    /* width: 80%; */
+    /* width: 5rem; */
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* For the line in-between */
+.line {
+    display: flex;
+    justify-content: center;
+    color: #686677;
+}
+
+.line span {
+    height: 2px;
+    width: 20%;
+    background-color: #CBCAD7;
+    display: block;
+    margin-top: 10px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-input label {
+    color: #9794AA;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.form-input input {
+    border: 1px solid #CBCAD7;
+    margin: 0 auto;
+    width: 80%;
+    padding: 1em;
+}
+
+.form-input input::placeholder {
+    color: #686677;
+    font-weight: 600;
+}
+
+.form-container a {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form-container div span a {
+    color: #686677;
+    font-size: 1.1em;
+}
+
+.form-container div span {
+    color: #686677;
+    font-size: 2em;
+    padding: 0.5em 0.4em;
+}

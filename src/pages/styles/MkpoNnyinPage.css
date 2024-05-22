@@ -1,0 +1,44 @@
+/*  --------------------- MKPO NNYIN STYLING ----------------- */
+
+.mkpo-nnyin-bg {
+    min-height: 70vh;
+    background-image: url('../img/mkpo-nnyin-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.mkpo-nnyin-img:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in;
+}
+
+.center-header h2 {
+    font-size: 5em;
+}
+
+.center-header p {
+    display: block;
+    font-size: 1.5em;
+}
+
+.mkpo-nnyin-1 {
+    padding: 5em 0;
+    background-color: #f8f5f5;
+}
+
+.mkpo-nnyin-1 .row {
+    position: relative;
+}
+
+.centered-div {
+    border-radius: 3.5em;
+    background-color: #d9d9d9;
+    height: 20%;
+    width: 20% !important;
+    position: absolute;
+    top: 37%;
+}

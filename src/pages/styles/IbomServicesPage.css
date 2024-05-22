@@ -1,0 +1,94 @@
+/* .services-page { */
+
+/*-------------------------------- Ibom Plumbing service styling ---------------- */
+
+.background-color {
+    background-color: #d8d8ff;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-container {
+    background: #f8f7f7;
+    background: red !;
+    border-radius: 3em;
+    padding: 4em 3em 2em;
+    position: relative;
+    top: -7em;
+    z-index: 1;
+}
+
+/* -------------------- I have to make this responsive on a mobile device---------------- */
+.service-card {
+    display: flex !important;
+    background-color: #d9d9d9;
+    border-radius: 1em;
+    padding: 0;
+    margin-bottom: 4.5em;
+
+    /* background-color: red; */
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 50%;
+}
+
+.service-details {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    a {
+        padding: 0.5rem 2rem !important;
+    }
+}
+
+.service-img {
+    flex-basis: 50%;
+}
+
+
+.card-body h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 36px;
+}
+
+.service-details a {
+    padding: 0.5em;
+}
+
+.card-img {
+    border-radius: 1em;
+}
+
+/* ----------------------RESPOSIVENESS-------------------------- */
+
+@media screen and (max-width:768px) {
+
+
+    /* Ibom service responsiveness */
+    .service-card {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .service-details {
+        margin-top: 2em;
+        margin-left: 0;
+
+    }
+
+}
+
+/* } */

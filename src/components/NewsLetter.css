@@ -1,0 +1,48 @@
+/*------------------------ CSTC EMAIL STYLING--------------------- */
+
+.signup-section {
+    background: #253451;
+    padding-bottom: 4em;
+}
+
+.signup-section h3 {
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 300;
+    font-size: 2em;
+
+}
+
+.signup-section p {
+    color: #fff;
+    line-height: 25px;
+    font-weight: 300;
+}
+
+.signup {
+    padding: 3.3em 0em;
+    border-radius: 30px;
+    background-color: #f8f5f5;
+    display: flex;
+    justify-content: center;
+}
+
+.input-wrapper {
+    width: 80%;
+}
+
+.input-style {
+    background-color: #d9d9d9;
+    padding: .80em;
+    border-radius: 15px;
+}
+
+.input-style:focus {
+    outline: 1px solid #d9d9d9;
+}
+
+
+.signup-btn {
+    border-radius: 15px;
+    padding: 0.8em 1.7em;
+}
