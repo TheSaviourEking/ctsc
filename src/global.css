@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a.btn,
+button.btn {
+    position: none !important;
+    text-decoration: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+form button {
+    position: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+a.btn::after,
+a.btn::before {
+    display: none;
+}
+
+/* body */
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Reusable class names */
+.pt-10 {
+    padding-top: 10em;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+/* WORKING */
+.active {
+    color: #c2d7ff !important;
+    border-bottom: 1px solid #c2d7ff;
+}
+
+
+/* ---------------------------- BUTTON STYLING ------------------ */
+
+a {
+    text-decoration: none;
+}
+
+.btn-primary {
+    border-radius: 30px;
+    color: #ffffff;
+    background-color: #253451;
+    padding: 0.8em 2.5em;
+}
+
+.btn-primary:hover {
+    background-color: #1c2841;
+}
+
+.btn-secondary {
+    border-radius: 30px;
+    background-color: #d9d9d9;
+    color: #253451;
+    font-size: 18.15px;
+    padding: 0.7em 2.5em;
+}
+
+.btn-secondary:hover {
+    background-color: #e7e7e7;
+    color: #253451;
+}
+
+.btn-tetiary {
+    padding: 0.5em 1.7em;
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.btn-tetiary:hover {
+    color: #d9d9d9;
+}
