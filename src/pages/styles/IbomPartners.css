@@ -1,23 +1,33 @@
+.IbomPartnersPage {
 
-/*-------------------- IBOM PARTNERS -------------------------*/
-.mb-8{
-    margin-bottom: 8em;
-}
+    & {
+        margin-top: 11rem !important;
+    }
 
-.ibom-partners-hd {
-    margin: 8em 0 2em 0 ;
-}
+    /*-------------------- IBOM PARTNERS -------------------------*/
+    .mb-8 {
+        margin-bottom: 8em;
+    }
+    .mt-5 {
+        margin-top: 5rem;
+    }
+    .ibom-partners-hd {
+        margin: 8em 0 2em 0;
+    }
 
-.ibom-partners-hd h2 {
-    font-weight: bold;
-    padding: 1em 1em;
-    background-color: #D8D8FF;
-    border-radius: 1.5em;
-    display: inline;
-}
-.about-partners{
-    background-color: #F8F8F8;
-    border-radius: 2em;
-    border: 1.71px solid #253451;
-    padding: 3em 2em 1em;
+    .ibom-partners-hd h2 {
+        font-weight: bold;
+        padding: 1em 1em;
+        background-color: #D8D8FF;
+        border-radius: 1.5em;
+        display: inline;
+    }
+
+    .about-partners {
+        background-color: #F8F8F8;
+        border-radius: 2em;
+        border: 1.71px solid #253451;
+        padding: 3em 2em 1em;
+    }
+
 }

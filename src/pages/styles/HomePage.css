@@ -4,6 +4,9 @@
   padding: 0;
 }
 
+.homePage {
+  margin-top: 3.6rem;
+}
 /* body */
 body {
   font-family: "Poppins", sans-serif;
@@ -342,8 +345,8 @@ a {
 
 .crack-the-code {
   background-color: #d9d9d9;
-  padding: 3em 0 0 0;
-  margin-bottom: 1rem;
+  /* padding: 3em 0 0 0; */
+  padding: 3em 0;
 }
 
 .left-side {
