@@ -20,7 +20,7 @@ const HomePage = () => {
     }, []);
 
     return (
-        <>
+        <div className="homePage">
             <Hero />
             <section>
                 <div className="content-section digital-access">
@@ -64,7 +64,7 @@ const HomePage = () => {
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     )
 }
 

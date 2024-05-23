@@ -2,7 +2,7 @@ import './styles/PersonalGrowthPage.css';
 
 const PersonalGrowthPage = () => {
     return (
-        <>
+        <section className='PersonalGrowthPage'>
             <section>
                 <div className="container-fluid section-container">
 
@@ -191,7 +191,7 @@ const PersonalGrowthPage = () => {
                     </div>
                 </div>
             </section>
-        </>
+        </section>
     )
 }
 
