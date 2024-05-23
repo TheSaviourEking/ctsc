@@ -38,7 +38,7 @@ const IbomServicesMenuPage = () => {
     };
 
     return (
-        <>
+        <section className="ibomServicesMenuPage">
             <section className="ibom-services">
 
                 <div className="container-fluid background-color">
@@ -53,9 +53,9 @@ const IbomServicesMenuPage = () => {
                 <div className="container">
                     {services && services.count > 0 ?
                         <div className="service-menu">
-                            <div className="row justify-content-center services-container">
+                            <div className="ro justify-content-center services-container">
                                 {services.results.map((service) => {
-                                    return <Link key={service.service_id} to={`/services/${service.service_id}`} className="col-10 col-md-12 service-card align-items-center justify-content-center">{service.service_name}</Link>
+                                    return <Link key={service.service_id} to={`/services/${service.service_id}`} className="col-10 col-md-12 service-card align-items-cente justify-content-center">{service.service_name}</Link>
                                 })}
                             </div>
                             <div className="container-sm" id="btns">
@@ -66,7 +66,7 @@ const IbomServicesMenuPage = () => {
                     }
                 </div>
             </section >
-        </>
+        </section>
     )
 }
 

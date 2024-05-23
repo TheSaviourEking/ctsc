@@ -43,7 +43,7 @@ const IbomEventsPage = () => {
                     {events.map(event => (
                         <div className="flex eventpage-card" key={event.event_id}>
                             <div className='image-wrapper'>
-                                <img src={event.event_image} alt={event.title} className="img-flui" />
+                                <img src={event.event_image} alt={event.event_name} className="img-flui" />
                             </div>
                             <div className="eventpage-card-text">
                                 <div className="upper">

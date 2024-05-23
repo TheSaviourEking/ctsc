@@ -7,7 +7,7 @@ import Image4 from '../assets/img/ibom-partners-4.png';
 
 const IbomPartnersPage = () => {
     return (
-        <>
+        <section className='IbomPartnersPage'>
             <div className="container mb-8">
                 <div className="text-center ibom-partners-hd">
                     <h2 className="text-center ">
@@ -15,7 +15,7 @@ const IbomPartnersPage = () => {
                     </h2>
                 </div>
 
-                <div className="row justify-content-center gy-4 ">
+                <div className="row justify-content-center gy-4 align-items-center mt-5">
                     <div className="col-10 col-md-10 col-lg-5 about-partners mt-5">
                         <p className="mb-md-5 mb-3">These are the partners whose services we trust. These are Businesses owned
                             by good
@@ -44,7 +44,7 @@ const IbomPartnersPage = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </section>
     )
 }
 

@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 
 import API_BASE_URL from "../config/config";
 
+import './FeatureStoryHome.css';
+
 const FeatureStory = ({ isHome }) => {
 
     const [featureStory, setFeatureStory] = useState([]);
@@ -17,7 +19,6 @@ const FeatureStory = ({ isHome }) => {
             console.log(featureStory, 'lllllllllllllllll');
         };
         getFeatureStories();
-        console.log(featureStory, 'again')
     }, []);
 
     function getLocalTime(timeStamp) {
@@ -34,8 +35,8 @@ const FeatureStory = ({ isHome }) => {
     }
 
     return (
-        isHome ?
-            <section>
+        isHome ? (
+            <section className="HomeFeatureStory">
                 <div className="container-fluid ctsc-story">
                     <div className="container content-section">
                         <div className="row justify-content-center">
@@ -44,10 +45,12 @@ const FeatureStory = ({ isHome }) => {
                                 {/* <img src="." alt="" className="img-fluid" /> */}
                                 {featureStory ? (
                                     <div>
-                                        <img src={featureStory.image} alt={featureStory.topic} className="img-fluid" />
+                                        <div className="image-container">
+                                            <img src={featureStory.image} alt={featureStory.topic} className="img-fluid" />
+                                        </div>
                                         <div className="ctsc-story-detail">
                                             <div className="ctsc-story-header">
-                                                {featureStory.topic}
+                                                <h2>{featureStory.topic}</h2>
                                                 <span>{getLocalTime(featureStory.created_at)}</span>
 
                                             </div>
@@ -70,7 +73,9 @@ const FeatureStory = ({ isHome }) => {
                 </div>
 
 
-            </section> : ''
+            </section>) : (
+            ''
+        )
     )
 }
 
