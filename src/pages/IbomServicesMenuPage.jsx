@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import API_BASE_URL from "../config/config";
+// import API_BASE_URL from "../config/config";
 
 import './styles/IbomServicesMenuPage.css';
 
@@ -11,6 +11,7 @@ const IbomServicesMenuPage = () => {
     const [currentPage, setCurrentPage] = useState(1);
 
     useEffect(() => {
+        const API_BASE_URL = import.meta.env.VITE_API_URL;
         const getServices = async (page) => {
             let response = await fetch(`${API_BASE_URL}/service/`);
             if (page > 1) {

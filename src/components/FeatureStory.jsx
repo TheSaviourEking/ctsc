@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-import API_BASE_URL from "../config/config";
+// import API_BASE_URL from "../config/config";
 
 import './FeatureStoryHome.css';
 
@@ -10,13 +10,13 @@ const FeatureStory = ({ isHome }) => {
     const [featureStory, setFeatureStory] = useState([]);
 
     useEffect(() => {
+        const API_BASE_URL = import.meta.env.VITE_API_URL;
         const getFeatureStories = async () => {
             let response = null;
             if (isHome) response = await fetch(`${API_BASE_URL}/story/feature-story/`);
             const featureStories = await response.json();
 
             setFeatureStory(() => featureStories[0]);
-            console.log(featureStory, 'lllllllllllllllll');
         };
         getFeatureStories();
     }, []);
@@ -43,7 +43,7 @@ const FeatureStory = ({ isHome }) => {
                             <div className="col-11 col-md-7 ">
                                 <h2>This Week's Feature Story</h2>
                                 {/* <img src="." alt="" className="img-fluid" /> */}
-                                {featureStory ? (
+                                {Object.keys(featureStory).length > 0 ? (
                                     <div>
                                         <div className="image-container">
                                             <img src={featureStory.image} alt={featureStory.topic} className="img-fluid" />
