@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import API_BASE_URL from '../config/config'
 
 import './styles/IbomEventsPage.css';
 
@@ -10,6 +9,7 @@ const IbomEventsPage = () => {
     const [events, setEvents] = useState([]);
 
     useEffect(() => {
+        const API_BASE_URL = import.meta.env.VITE_API_URL;
         const getEvent = async () => {
             const response = await fetch(`${API_BASE_URL}/event/`);
             const fetchedEvents = await response.json();

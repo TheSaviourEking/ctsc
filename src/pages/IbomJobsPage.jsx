@@ -21,10 +21,10 @@ import { FaStar, FaUser } from 'react-icons/fa';
 import { FaUserGroup } from 'react-icons/fa6';
 
 import { useEffect, useState } from 'react';
-import API_BASE_URL from '../config/config';
+// import API_BASE_URL from '../config/config';
 
 const IbomJobsPage = () => {
-
+    const API_BASE_URL = import.meta.env.VITE_API_URL;
     const [latestJobs, setLatestJobs] = useState([]);
     // const [jobRequirements, setJobRequirements] = useState([]);
     const [viewAllRequirements, setViewAllRequirements] = useState(false);
@@ -304,8 +304,8 @@ const IbomJobsPage = () => {
                                             <div className="bottom-section">
                                                 <h5 className="mb-2">Requirements & Skills</h5>
                                                 {requirements = latestJob.requirements}
-                                                {requirements.split(',').map(requirement => {
-                                                    return <h6>{requirement}</h6>
+                                                {requirements.split(',').map((requirement, i) => {
+                                                    return <h6 key={i}>{requirement}</h6>
                                                 })}
                                                 {/* <Link to='/'>{viewAllRequirements ? 'view less' : 'view all'}</Link> */}
                                                 <Link onClick={() => setViewAllRequirements(r => !r)}>{viewAllRequirements ? 'view less' : 'view all'}</Link>

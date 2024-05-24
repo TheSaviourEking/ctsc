@@ -1,6 +1,5 @@
 import validator from 'validator';
 import { useEffect, useState } from 'react';
-import API_BASE_URL from '../config/config';
 
 import './NewsLetter.css';
 
@@ -17,6 +16,7 @@ const NewsLetter = () => {
     const [errors, setErrors] = useState({});
     const [safeDetails, setSafeDetails] = useState(false);
 
+    const API_BASE_URL = import.meta.env.VITE_API_URL;
     useEffect(() => {
         if (safeDetails) {
             (async function () {

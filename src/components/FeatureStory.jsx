@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-import API_BASE_URL from "../config/config";
+// import API_BASE_URL from "../config/config";
 
 import './FeatureStoryHome.css';
 
@@ -10,6 +10,7 @@ const FeatureStory = ({ isHome }) => {
     const [featureStory, setFeatureStory] = useState([]);
 
     useEffect(() => {
+        const API_BASE_URL = import.meta.env.VITE_API_URL;
         const getFeatureStories = async () => {
             let response = null;
             if (isHome) response = await fetch(`${API_BASE_URL}/story/feature-story/`);

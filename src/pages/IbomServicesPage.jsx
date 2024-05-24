@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-import API_BASE_URL from "../config/config";
+// import API_BASE_URL from "../config/config";
 
 import './styles/IbomServicesPage.css';
 
@@ -11,10 +11,11 @@ const IbomservicesPage = () => {
     const [service, setService] = useState({});
 
     useEffect(() => {
+        const API_BASE_URL = import.meta.env.VITE_API_URL;
         const getService = async () => {
             const response = await fetch(`${API_BASE_URL}/service/${parseFloat(serviceId)}/`);
             const fetchedService = await response.json();
-            
+
             setService(() => fetchedService);
         }
         getService();
