@@ -20,13 +20,38 @@ import './styles/IbomJobsPage.css';
 import { FaStar, FaUser } from 'react-icons/fa';
 import { FaUserGroup } from 'react-icons/fa6';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import API_BASE_URL from '../config/config';
 
 const IbomJobsPage = () => {
+
+    const [latestJobs, setLatestJobs] = useState([]);
+    // const [jobRequirements, setJobRequirements] = useState([]);
+    const [viewAllRequirements, setViewAllRequirements] = useState(false);
+
+    let requirements = [];
 
     useEffect(() => {
         document.title = 'Ibom Jobs - Cracking The Style Code';
     }, [])
+
+    useEffect(() => {
+        const getLatestJobs = async () => {
+            const response = await fetch(API_BASE_URL + '/latest-job/');
+            const fetchedLatestJobs = await response.json();
+
+            setLatestJobs(() => fetchedLatestJobs);
+            // setJobRequirements(()=> fetchedLatestJobs.re)
+            console.log(fetchedLatestJobs, '--------', latestJobs)
+        };
+        getLatestJobs();
+    }, []);
+
+    useEffect(() => {
+        if (!viewAllRequirements) {
+
+        }
+    }, [viewAllRequirements])
 
     return (
         <>
@@ -263,61 +288,37 @@ const IbomJobsPage = () => {
                             <h3>Latest Job Opportunities</h3> <Link href="#"><span>See All</span></Link>
                         </div>
 
-                        <div className='container flex available-jobs'>
-                            <div className="col-11 col-md-5 col-lg-4 job-opportunities">
-                                <div className="top-section mb-2">
-                                    <div className="div">
-                                        <h5 className="job-title"><i className="fa-solid fa-briefcase"></i> Graphics Designer</h5>
-                                        <p>Newtech <span className="job-status">Remote</span></p>
-                                    </div>
-                                    <div className="circle-bg"></div>
-                                </div>
+                        <div className='container-fluid flex available-jobs'>
+                            {latestJobs.length > 0 ? (
+                                latestJobs.map(latestJob => {
+                                    return (
+                                        <div key={latestJob.id} className="col-11 col-md-5 col-lg-4 job-opportunities">
+                                            <div className="top-section mb-2">
+                                                <div className="div">
+                                                    <h5 className="job-title"><i className="fa-solid fa-briefcase"></i> {latestJob.title.toUpperCase()}</h5>
+                                                    <p>{latestJob.hiring_company} <span className="job-status">{latestJob.tag}</span></p>
+                                                </div>
+                                                <div className="circle-bg"></div>
+                                            </div>
 
-                                <div className="bottom-section">
-                                    <h5 className="mb-2">Requirements & Skills</h5>
-                                    <h6>Have years of experience in visual design</h6>
-                                    <h6>Have Link strong protfolio</h6>
-                                    <h6>Be able to work with teams</h6>
-                                    <Link href="#">view all</Link>
-                                </div>
-                                <div className="apply-btn"><Link href="#" className="btn btn-primary" style={{ padding: '0em 1em' }}>Apply</Link></div>
-                            </div>
-                            <div className="col-11 col-md-5 col-lg-4 job-opportunities">
-                                <div className="top-section mb-2">
-                                    <div className="div">
-                                        <h5 className="job-title"><i className="fa-solid fa-briefcase"></i>Cleaner </h5>
-                                        <p>Ibom Air <span className="job-status">Remote</span></p>
-                                    </div>
-                                    <div className="circle-bg"></div>
-                                </div>
-
-                                <div className="bottom-section">
-                                    <h5 className="mb-2">Requirements & Skills</h5>
-                                    <h6>Have years of experience in visual design</h6>
-                                    <h6>Have Link strong protfolio</h6>
-                                    <h6>Be able to work with teams</h6>
-                                    <Link href="#">view all</Link>
-                                </div>
-                                <div className="apply-btn"><Link href="#" className="btn btn-primary" style={{ padding: '0em 1em' }}>Apply</Link></div>
-                            </div>
-                            <div className="col-11 col-md-5 col-lg-4 job-opportunities">
-                                <div className="top-section mb-2">
-                                    <div className="div">
-                                        <h5 className="job-title"><i className="fa-solid fa-briefcase"></i> Graphics Designer</h5>
-                                        <p>Newtech <span className="job-status">Remote</span></p>
-                                    </div>
-                                    <div className="circle-bg"></div>
-                                </div>
-
-                                <div className="bottom-section">
-                                    <h5 className="mb-2">Requirements & Skills</h5>
-                                    <h6>Have years of experience in visual design</h6>
-                                    <h6>Have Link strong protfolio</h6>
-                                    <h6>Be able to work with teams</h6>
-                                    <Link href="#">view all</Link>
-                                </div>
-                                <div className="apply-btn"><Link href="#" className="btn btn-primary" style={{ padding: '0em 1em' }}>Apply</Link></div>
-                            </div>
+                                            <div className="bottom-section">
+                                                <h5 className="mb-2">Requirements & Skills</h5>
+                                                {requirements = latestJob.requirements}
+                                                {requirements.split(',').map(requirement => {
+                                                    return <h6>{requirement}</h6>
+                                                })}
+                                                {/* <Link to='/'>{viewAllRequirements ? 'view less' : 'view all'}</Link> */}
+                                                <Link onClick={() => setViewAllRequirements(r => !r)}>{viewAllRequirements ? 'view less' : 'view all'}</Link>
+                                            </div>
+                                            <div className="apply-btn">
+                                                <Link to='/apply' className="btn btn-primary" style={{ padding: '0em 1em' }}>Apply</Link>
+                                            </div>
+                                        </div>
+                                    )
+                                })
+                            ) : (
+                                <h1>No available job at this time</h1>
+                            )}
                         </div>
                     </div>
                 </div>

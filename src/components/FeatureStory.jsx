@@ -16,7 +16,6 @@ const FeatureStory = ({ isHome }) => {
             const featureStories = await response.json();
 
             setFeatureStory(() => featureStories[0]);
-            console.log(featureStory, 'lllllllllllllllll');
         };
         getFeatureStories();
     }, []);
@@ -43,7 +42,7 @@ const FeatureStory = ({ isHome }) => {
                             <div className="col-11 col-md-7 ">
                                 <h2>This Week's Feature Story</h2>
                                 {/* <img src="." alt="" className="img-fluid" /> */}
-                                {featureStory ? (
+                                {Object.keys(featureStory).length > 0 ? (
                                     <div>
                                         <div className="image-container">
                                             <img src={featureStory.image} alt={featureStory.topic} className="img-fluid" />
