@@ -66,6 +66,7 @@ header {
 .active {
     color: #c2d7ff;
     border-bottom: 1px solid #c2d7ff;
+    /* background-color: red; */
 }
 
 
@@ -77,8 +78,9 @@ header {
     display: block;
 }
 
-.dropdown:hover>.nav-link i {
+.dropdown:hover>.nav-link svg {
     transform: rotate(180deg);
+    transition: 0.3s ease-in-out;
 }
 
 .dropdown-content {

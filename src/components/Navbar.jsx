@@ -2,7 +2,7 @@ import { NavLink, Link } from "react-router-dom";
 
 /** FONT AWESOME */
 import { FaBars, FaCaretDown } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import './Navbar.css';
 
@@ -12,14 +12,20 @@ const Navbar = () => {
     };
 
     const [showMenu, setShowMenu] = useState(false);
+    const [active, setActive] = useState(null);
 
-    const toggleMenu = (e) => {
+    const toggleMenu = () => {
         setShowMenu((prevMenu) => !prevMenu);
     }
 
-    // useEffect(()=> {
-    //     if (window.wid)
-    // }, [showMenu]);
+    useEffect(() => {
+        const navMenu = document.getElementById('nav-menu');
+        if (!showMenu) {
+            navMenu.classList.add('show');
+        } else {
+            navMenu.classList.remove('show')
+        }
+    }, [showMenu]);
 
     return (
         <header>
@@ -55,6 +61,7 @@ const Navbar = () => {
                     {/* DROPDOWN THREE */}
                     <li className="nav-item dropdown">
                         <div className="nav-link">About CTSCode <FaCaretDown /></div>
+                        {/* <div className={linkClass}>About CTSCode <FaCaretDown /></div> */}
                         <ul className="dropdown-content">
                             <li><NavLink to="/about-us">About Us</NavLink></li>
                             <li><NavLink to="/ctsc-team">CTSC Team</NavLink></li>
@@ -63,7 +70,7 @@ const Navbar = () => {
                         </ul>
                     </li>
                 </ul>
-                <FaBars className={`nav-toggle ${showMenu ? 'show-menu' : ''}`} onClick={toggleMenu} />
+                <FaBars className='nav-toggle' onClick={toggleMenu} />
             </nav>
         </header>
     );
