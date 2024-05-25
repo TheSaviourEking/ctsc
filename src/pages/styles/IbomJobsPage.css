@@ -153,6 +153,11 @@
     box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.2);
     border-radius: 1em;
 
+    display: flex;
+    /* align-items: center; */
+    flex-flow: column;
+    justify-content: space-between;
+
     .job-status {
         padding: 0.5rem;
         color: var(--primary-white);

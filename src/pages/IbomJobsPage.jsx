@@ -21,15 +21,14 @@ import { FaStar, FaUser } from 'react-icons/fa';
 import { FaUserGroup } from 'react-icons/fa6';
 
 import { useEffect, useState } from 'react';
-// import API_BASE_URL from '../config/config';
+import LatestJobsCard from '../components/LatestJobsCard';
+
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 const IbomJobsPage = () => {
-    const API_BASE_URL = import.meta.env.VITE_API_URL;
     const [latestJobs, setLatestJobs] = useState([]);
-    // const [jobRequirements, setJobRequirements] = useState([]);
-    const [viewAllRequirements, setViewAllRequirements] = useState(false);
 
-    let requirements = [];
+    // let requirements = [];
 
     useEffect(() => {
         document.title = 'Ibom Jobs - Cracking The Style Code';
@@ -47,11 +46,6 @@ const IbomJobsPage = () => {
         getLatestJobs();
     }, []);
 
-    useEffect(() => {
-        if (!viewAllRequirements) {
-
-        }
-    }, [viewAllRequirements])
 
     return (
         <>
@@ -292,28 +286,7 @@ const IbomJobsPage = () => {
                             {latestJobs.length > 0 ? (
                                 latestJobs.map(latestJob => {
                                     return (
-                                        <div key={latestJob.id} className="col-11 col-md-5 col-lg-4 job-opportunities">
-                                            <div className="top-section mb-2">
-                                                <div className="div">
-                                                    <h5 className="job-title"><i className="fa-solid fa-briefcase"></i> {latestJob.title.toUpperCase()}</h5>
-                                                    <p>{latestJob.hiring_company} <span className="job-status">{latestJob.tag}</span></p>
-                                                </div>
-                                                <div className="circle-bg"></div>
-                                            </div>
-
-                                            <div className="bottom-section">
-                                                <h5 className="mb-2">Requirements & Skills</h5>
-                                                {requirements = latestJob.requirements}
-                                                {requirements.split(',').map((requirement, i) => {
-                                                    return <h6 key={i}>{requirement}</h6>
-                                                })}
-                                                {/* <Link to='/'>{viewAllRequirements ? 'view less' : 'view all'}</Link> */}
-                                                <Link onClick={() => setViewAllRequirements(r => !r)}>{viewAllRequirements ? 'view less' : 'view all'}</Link>
-                                            </div>
-                                            <div className="apply-btn">
-                                                <Link to='/apply' className="btn btn-primary" style={{ padding: '0em 1em' }}>Apply</Link>
-                                            </div>
-                                        </div>
+                                        <LatestJobsCard key={latestJob.id} job={latestJob} />
                                     )
                                 })
                             ) : (
@@ -405,13 +378,12 @@ const IbomJobsPage = () => {
                         </div>
                     </div>
 
-                    <h3 className="text-center">Haven't signed up yet?<Link href="#"> Sign up</Link></h3>
+                    <h3 className="text-center">Haven't signed up yet?<Link to="/signup"> Sign up</Link></h3>
 
                 </div>
             </section>
         </>
     )
 }
-
 
 export default IbomJobsPage;
