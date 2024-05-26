@@ -12,7 +12,6 @@ const Navbar = () => {
     };
 
     const [showMenu, setShowMenu] = useState(false);
-    const [active, setActive] = useState(null);
 
     const toggleMenu = () => {
         setShowMenu((prevMenu) => !prevMenu);
@@ -20,10 +19,11 @@ const Navbar = () => {
 
     useEffect(() => {
         const navMenu = document.getElementById('nav-menu');
-        if (!showMenu) {
+        
+        if (showMenu) {
             navMenu.classList.add('show');
         } else {
-            navMenu.classList.remove('show')
+            navMenu.classList.remove('show');
         }
     }, [showMenu]);
 
