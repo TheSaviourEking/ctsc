@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 import './styles/IbomEventsPage.css';
-// import Spinner from '../components/Spinner';
-import Spinner from 'react-spinner';
+import Spinner from '../components/Spinner';
 
 const IbomEventsPage = () => {
     
@@ -24,7 +23,7 @@ const IbomEventsPage = () => {
                 setLoading(() => false);
             }
         };
-        
+    
         getEvent();
     }, []);
 
@@ -48,8 +47,7 @@ const IbomEventsPage = () => {
                 </div>
             </div>
             {loading ? (
-                // <Spinner loading={loading} />
-                <Spinner />
+                <Spinner loading={loading} />
             ) : (
                 events.length > 0 ? (
                     <div className="container card-container">

@@ -180,7 +180,7 @@ body {
 .background-img {
   background-image: url('../../assets/img/Iniedoibibio.png');
   background-size: cover;
-  background-color: blue;
+  background-color: #253451;
   height: 90vh;
   margin-top: 3px;
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 // import API_BASE_URL from "../config/config";
+import Spinner from "../components/Spinner";
 
 import './styles/IbomServicesMenuPage.css';
 
@@ -9,17 +10,24 @@ const IbomServicesMenuPage = () => {
 
     const [services, setServices] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const API_BASE_URL = import.meta.env.VITE_API_URL;
         const getServices = async (page) => {
-            let response = await fetch(`${API_BASE_URL}/service/`);
-            if (page > 1) {
-                response = await fetch(`${API_BASE_URL}/service/?page=${page}`);
+            try {
+                let response = await fetch(`${API_BASE_URL}/service/`);
+                if (page > 1) {
+                    response = await fetch(`${API_BASE_URL}/service/?page=${page}`);
+                }
+                const fetchedServices = await response.json();
+                setServices(() => fetchedServices); // Update state with fetched data
+                // console.log(fetchedServices, "fetchedServices");
+            } catch (error) {
+                console.error('ERROR:', error);
+            } finally {
+                setLoading(() => false)
             }
-            const fetchedServices = await response.json();
-            setServices(fetchedServices); // Update state with fetched data
-            console.log(fetchedServices, "fetchedServices");
         };
         getServices(currentPage);
     }, [currentPage]);
@@ -52,19 +60,22 @@ const IbomServicesMenuPage = () => {
 
                 {/* <!-- <div className="container-fluid"> --> */}
                 <div className="container">
-                    {services && services.count > 0 ?
-                        <div className="service-menu">
-                            <div className="ro justify-content-center services-container">
-                                {services.results.map((service) => {
-                                    return <Link key={service.service_id} to={`/services/${service.service_id}`} className="col-10 col-md-12 service-card align-items-cente justify-content-center">{service.service_name}</Link>
-                                })}
-                            </div>
-                            <div className="container-sm" id="btns">
-                                {services.previous && <Link to='#' onClick={handlePreviousClick}>Prev</Link>}
-                                {services.next && < Link to='#' onClick={handleNextClick}>Next</Link>}
-                            </div>
-                        </div> : <h1>No services available at this moment</h1>
-                    }
+                    {loading ? (
+                        <Spinner loading={loading} />
+                    ) : (
+                        services && services.count > 0 ?
+                            <div className="service-menu">
+                                <div className="ro justify-content-center services-container">
+                                    {services.results.map((service) => {
+                                        return <Link key={service.service_id} to={`/services/${service.service_id}`} className="col-10 col-md-12 service-card align-items-cente justify-content-center">{service.service_name}</Link>
+                                    })}
+                                </div>
+                                <div className="container-sm" id="btns">
+                                    {services.previous && <Link to='#' onClick={handlePreviousClick}>Prev</Link>}
+                                    {services.next && < Link to='#' onClick={handleNextClick}>Next</Link>}
+                                </div>
+                            </div> : <h1>No services available at this moment</h1>
+                    )}
                 </div>
             </section >
         </section>

@@ -23,12 +23,13 @@ import { FaUserGroup } from 'react-icons/fa6';
 import { useEffect, useState } from 'react';
 import LatestJobsCard from '../components/LatestJobsCard';
 
+import Spinner from '../components/Spinner';
+
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 const IbomJobsPage = () => {
     const [latestJobs, setLatestJobs] = useState([]);
-
-    // let requirements = [];
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         document.title = 'Ibom Jobs - Cracking The Style Code';
@@ -36,12 +37,17 @@ const IbomJobsPage = () => {
 
     useEffect(() => {
         const getLatestJobs = async () => {
-            const response = await fetch(API_BASE_URL + '/latest-job/');
-            const fetchedLatestJobs = await response.json();
+            try {
+                const response = await fetch(API_BASE_URL + '/latest-job/');
+                const fetchedLatestJobs = await response.json();
 
-            setLatestJobs(() => fetchedLatestJobs);
-            // setJobRequirements(()=> fetchedLatestJobs.re)
-            console.log(fetchedLatestJobs, '--------', latestJobs)
+                setLatestJobs(() => fetchedLatestJobs);
+                console.log(fetchedLatestJobs, '--------', latestJobs)
+            } catch (error) {
+                console.error('ERROR:', error);
+            } finally {
+                setLoading(() => false);
+            }
         };
         getLatestJobs();
     }, []);
@@ -282,20 +288,24 @@ const IbomJobsPage = () => {
                             <h3>Latest Job Opportunities</h3> <Link href="#"><span>See All</span></Link>
                         </div>
 
-                        <div className='container-fluid flex available-jobs'>
-                            {latestJobs.length > 0 ? (
-                                latestJobs.map(latestJob => {
-                                    return (
-                                        <LatestJobsCard key={latestJob.id} job={latestJob} />
-                                    )
-                                })
-                            ) : (
-                                <h1>No available job at this time</h1>
-                            )}
-                        </div>
+                        {loading ? (
+                            <Spinner loading={loading} />
+                        ) : (
+                            <div className='container-fluid flex available-jobs'>
+                                {latestJobs.length > 0 ? (
+                                    latestJobs.map(latestJob => {
+                                        return (
+                                            <LatestJobsCard key={latestJob.id} job={latestJob} />
+                                        )
+                                    })
+                                ) : (
+                                    <h1>No available job at this time</h1>
+                                )}
+                            </div>
+                        )}
                     </div>
                 </div>
-            </section>
+            </section >
 
             <section>
                 <div className="pop-up" id="pop-up">
