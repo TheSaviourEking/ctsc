@@ -15,7 +15,7 @@ import { useEffect, useState } from "react";
 
 const HomePage = () => {
     const API_BASE_URL = import.meta.env.VITE_API_URL;
-    
+
     useEffect(() => {
         document.title = 'Cracking the style code - Home of Creativity'
     }, []);
