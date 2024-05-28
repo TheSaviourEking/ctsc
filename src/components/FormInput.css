@@ -1,0 +1,17 @@
+.mb-4 {
+    span {
+        display: none;
+        font-size: 12px;
+        font-style: italic;
+        color: red !important;
+    }
+
+    input:invalid[focused='true'] {
+        border: 1px solid red;
+    }
+
+    input:invalid[focused='true']~div>span {
+        display: block;
+    }
+
+}
