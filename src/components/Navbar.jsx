@@ -18,8 +18,17 @@ const Navbar = () => {
     }
 
     useEffect(() => {
+        const navLinks = document.querySelectorAll('ul a');
+        navLinks.forEach(navLink => {
+            navLink.addEventListener('click', () => {
+                setShowMenu(() => false)
+            })
+        })
+    })
+
+    useEffect(() => {
         const navMenu = document.getElementById('nav-menu');
-        
+
         if (showMenu) {
             navMenu.classList.add('show');
         } else {

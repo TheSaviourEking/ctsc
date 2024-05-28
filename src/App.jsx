@@ -27,6 +27,8 @@ import AboutUsPage from './pages/AboutUsPage';
 import CtscTeamPage from './pages/CtscTeamPage';
 import ContactUsPage from './pages/ContactUsPage';
 import SignUpPage from './pages/SignUpPage';
+import AddJobsPage from './pages/AddJobsPage';
+import IbomJobsCategoriesPage from './pages/IbomJobsCategoriesPage';
 
 
 const App = () => {
@@ -42,6 +44,8 @@ const App = () => {
         <Route path='/services/:serviceId' element={<IbomservicesPage />} />
         <Route path='/partners' element={<IbomPartnersPage />} />
         <Route path='/jobs' element={<IbomJobsPage />} />
+        <Route path='/jobs/add' element={<AddJobsPage />} />
+        <Route path='/jobs/:category' element={<IbomJobsCategoriesPage />} />
         <Route path='/news-and-stories' element={<NewsAndStoriesPage />} />
         <Route path='/feature-stories' element={<FeatureStoriesPage />} />
         <Route path='/personal-growth' element={<PersonalGrowthPage />} />

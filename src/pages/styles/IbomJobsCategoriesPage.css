@@ -1,0 +1,88 @@
+.IbomJobsCategoriesPage {
+    &{
+        margin-top: 6rem;
+        /* margin-top: calc(100vh + 8rem); */
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* ----------------- Ibom jobs designer styling --------------------- */
+
+    .services-container {
+        position: relative;
+        display: flex !important;
+        gap: 1em;
+        /* background-color: blue; */
+        padding: 1em;
+        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .services-container>div {
+        flex-basis: 30%;
+        min-width: 20.125rem;
+        min-height: 20.125rem
+    }
+
+    .talent-card {
+        display: flex;
+        position: relative;
+        justify-content: flex-start !important;
+        padding: 1rem;
+    }
+
+    .talent-card>div:first-child {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+
+    .talent-card>div:last-child {
+        align-self: flex-end;
+    }
+
+    .talent-details p {
+        margin: 0.2rem 0;
+    }
+
+    .talent-details a {
+        background-color: #fff !important;
+        text-decoration: none;
+        border-radius: 1rem;
+
+        padding: 0.2rem 0.3rem;
+        border: 2px solid black;
+    }
+
+    .talent-details span {
+        border-radius: 1rem;
+        padding: 1px 5px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        color: #000;
+        text-transform: capitalize;
+        background-color: #00FF75;
+    }
+
+    .talent-details>p:first-child {
+        font-size: 2em;
+        font-family: 'Inter', 'sans-serif';
+        line-height: 1.5125rem;
+        font-weight: 700;
+        color: #FFFFFF;
+    }
+
+    .talent-details>p {
+        color: #fff;
+    }
+}
