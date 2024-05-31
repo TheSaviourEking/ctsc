@@ -75,7 +75,7 @@ header {
 }
 
 .dropdown:hover>.dropdown-content {
-    display: block;
+    /* display: block; */
 }
 
 .dropdown:hover>.nav-link svg {
@@ -130,4 +130,25 @@ header {
 
 a {
     text-decoration: none;
+}
+
+@media screen and (max-width:768px) {
+    .nav-item.dropdown {
+        ul {
+            display: block !important;
+        }
+
+        svg {
+            display: none;
+        }
+    }
+
+    ul.nav-menu {
+        height: calc(100vh - 5rem);
+        flex-direction: column;
+        justify-content: center;
+        bottom: 0;
+        right: 0;
+        top: 100%;
+    }
 }

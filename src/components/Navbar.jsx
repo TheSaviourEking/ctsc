@@ -23,8 +23,16 @@ const Navbar = () => {
             navLink.addEventListener('click', () => {
                 setShowMenu(() => false)
             })
-        })
-    })
+        });
+
+        return () => {
+            navLinks.forEach(navLink => {
+                navLink.removeEventListener('click', () => {
+                    setShowMenu(() => false)
+                })
+            });
+        }
+    }, [])
 
     useEffect(() => {
         const navMenu = document.getElementById('nav-menu');
@@ -34,6 +42,8 @@ const Navbar = () => {
         } else {
             navMenu.classList.remove('show');
         }
+
+        return () => navMenu.classList.remove('show');
     }, [showMenu]);
 
     return (
