@@ -50,7 +50,7 @@ const IbomServicesMenuPage = () => {
         <section className="ibomServicesMenuPage">
             <section className="ibom-services">
 
-                <div className="container-fluid background-color">
+                <div className="container-fluid background-color subpage-backgroun">
                     <div className="container ">
                         <h1 className="text-center">IBOM SERVICES</h1>
                         <p className="text-center">Find Services Near You</p>

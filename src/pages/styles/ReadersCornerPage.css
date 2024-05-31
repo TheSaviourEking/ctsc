@@ -11,7 +11,7 @@
     }
 
     .ctsc-interviews-bg {
-        min-height: 70vh;
+        /* min-height: 70vh; */
         background-image: url('../../assets/img/mkpo-nnyin-bg.jpg');
         background-size: cover;
         background-position: center;
@@ -19,6 +19,8 @@
         align-items: center;
         justify-content: center;
         color: #fff;
+        /* min-height: unset;
+        padding: 9rem 0; */
     }
 
     .mkpo-nnyin-img:hover {

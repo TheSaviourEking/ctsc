@@ -3,7 +3,7 @@ import './styles/ReadersCornerPage.css';
 const ReadersCornerPage = () => {
     return (
         <section className='ReadersCornerPage'>
-            <div className="container-fluid ctsc-interviews-bg">
+            <div className="container-fluid ctsc-interviews-bg subpage-background">
                 <div className="center-header">
                     {/* <!-- <p className="text-center">ctsc interviews</p> --> */}
                     <h2 className="pb-2 text-center">Reader's Corner</h2>

@@ -41,7 +41,7 @@ const IbomEventsPage = () => {
     }
     return (
         <div className='ibomEventsPage'>
-            <div className="container-fluid ibom-event-bg">
+            <div className="container-fluid ibom-event-bg subpage-background">
                 <div className="center-header">
                     <h2 className="pb-2 text-center bld">IBOM EVENTS</h2>
                 </div>

@@ -2,6 +2,7 @@
 
     & {
         margin-top: 11rem !important;
+        margin-top: 10rem !important;
     }
 
     /*-------------------- IBOM PARTNERS -------------------------*/
@@ -12,7 +13,7 @@
         margin-top: 5rem;
     }
     .ibom-partners-hd {
-        margin: 8em 0 2em 0;
+        /* margin: 8em 0 2em 0; */
     }
 
     .ibom-partners-hd h2 {

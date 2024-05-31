@@ -24,7 +24,7 @@ const IbomservicesPage = () => {
     return (
         service ? (
             <section>
-                <div className="container-fluid background-color">
+                <div className="container-fluid background-color subpage-background">
                     <div className="container">
                         <h1 className="text-center Plumber-header-">{service.service_name} SERVICE</h1>
 

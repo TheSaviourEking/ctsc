@@ -12,7 +12,7 @@ const MkpoNnyinPage = () => {
 
     return (
         <>
-            <div className="container-fluid mkpo-nnyin-bg" style={{ backgroundImage: `url(${backgroundImage})` }}>
+            <div className="container-fluid mkpo-nnyin-bg subpage-background" style={{ backgroundImage: `url(${backgroundImage})` }}>
                 <div className="center-header">
                     <h2 className="pb-2 text-center">Mkpo Nnyin </h2>
                     <p className="text-center">Our Culture & Pride</p>

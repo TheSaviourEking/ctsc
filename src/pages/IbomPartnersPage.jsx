@@ -1,4 +1,4 @@
-import './styles/IbomPartners.css';
+import './styles/IbomPartnersPage.css';
 
 import Image1 from '../assets/img/ibom-partners-1.png';
 import Image2 from '../assets/img/ibom-partners-2.png';
@@ -8,8 +8,8 @@ import Image4 from '../assets/img/ibom-partners-4.png';
 const IbomPartnersPage = () => {
     return (
         <section className='IbomPartnersPage'>
-            <div className="container mb-8">
-                <div className="text-center ibom-partners-hd">
+            <div className="container">
+                <div className="text-center ibom-partners-hd subpage-background">
                     <h2 className="text-center ">
                         Ibom Partners
                     </h2>
