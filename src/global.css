@@ -89,3 +89,24 @@ a {
 .btn-tetiary:hover {
     color: #d9d9d9;
 }
+
+/* NEW RULE */
+.subpage-background {
+    min-height: unset !important;
+    height: unset !important;
+    padding: 9rem 0 !important;
+}
+
+@media screen and (max-width: 768px) {
+    /* .background-img {
+        height: 50vh;
+    } */
+}
+
+@media screen and (max-width: 992px) {
+    .subpage-background {
+        min-height: unset !important;
+        height: unset !important;
+        padding: 3rem 0 !important;
+    }
+}
